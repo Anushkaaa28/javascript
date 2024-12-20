@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Ecommerce - ecommerce website </title>
+  <link rel="icon" href=".//eflyer.jpg">
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  li {
+    margin-left: 60px;
+  }
+
+  .newProductsCustom input {
+    margin: 5px;
+    border-radius: 5px;
+  }
+
+ 
+</style>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(34, 32, 32);">
+      <div class="container-fluid">
+        <a class="navbar-brand text-secondary" href="#"><i class="fa-solid fa-tags text-success"></i> Ecommerce.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active  text-white" style="margin-left: 600px;" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-white" href="#" data-bs-toggle="modal"
+                data-bs-target="#exampleModal"></i>Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-white" href="#"></i>cart <i class="fa-solid fa-cart-shopping"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  text-white" href="#">Wish list <i class="fa-solid fa-heart"></i></a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+    <div class="container-fluid">
+    <div class="m-4 bg-secondary p-1 rounded newProductsCustom">
+      <div class="form-group">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search Products...">
+      </div>
+    </div>
+
+
+    <div class="m-4 bg-secondary p-4 rounded newProductsCustom">
+
+      <input type="text" id="productBrand" placeholder="Brand" required>
+      <input type="text" id="productDescription" placeholder="Description" required>
+      <input type="number" id="productPrice" placeholder="Price" required>
+      <input type="number" id="productQuantity" placeholder="Quantity" required>
+      <input type="file" id="productImage" placeholder="Upload image">
+      <button class="btn btn-dark save" onclick="addProducts('new')">Add Product</button>
+    </div>
+
+
+    <div id="productList" class="d-flex flex-wrap justify-content-around">
+
+    </div>
+
+  </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+
+
+
+  <!-- Model code -->
+  <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Register here</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <form>
+            <div>
+              <div class="form-group mb-3">
+                <label for="exampleInputName">Name</label>
+                <input type="text" class="form-control" id="exampleInputName" placeholder="Enter your name">
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                  else.</small>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="exampleInputConNumber">Contact Number</label>
+                <input type="text" class="form-control" id="exampleInputConNumber"
+                  placeholder="Enter your contact number">
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                  autocomplete="">
+              </div>
+
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+
+          </form>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary">Save changes</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="ecommerce.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
